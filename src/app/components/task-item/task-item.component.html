@@ -1,0 +1,7 @@
+<div class="task" [ngClass]="{reminder: task.reminder}" 
+(dblclick)="onTaskReminder(task)" [@openClose]="isOpen ? 'open' : 'closed'">
+    <h3> {{task.title}}
+    <fa-icon  [icon]="faTimes" (click)="onDelete(task)" ></fa-icon>    
+    </h3>
+    <p> {{task.body}}</p>
+</div>
